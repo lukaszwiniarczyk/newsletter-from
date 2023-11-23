@@ -1,0 +1,229 @@
+@use './colors' as *;
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html{
+    font-size: 62.5%;
+    
+}
+body{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.6rem;
+    width: 100%;
+    background-color: $charcoalGrey;
+}
+
+.main{
+    width: 375px;
+    position: relative;
+    .newsletter{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+        background-color: $white;
+        height: 100dvh;
+        &__img{
+            width: 100%;
+            height: 35%;
+            &-img{
+                width: 100%;
+                height: 100%;
+                &-desktop{
+                    display: none;
+                }
+            }
+        }
+        &__text{
+            padding: 4rem 3rem;
+            &-heading{
+                font-size: 3.5rem;
+                color: $darkSlateGrey;
+            }
+            &-description{
+                margin: 2rem 0;
+            }
+            &-benefit{
+              display: flex;
+              padding: 0.8rem;
+              &-info{
+                margin-left: 2rem;
+              }
+            }
+            &-form{
+                display: flex;
+                
+                flex-direction: column;
+                padding: 3rem 0;
+                &-box{
+                    display: flex;
+                    justify-content: space-between;
+                    label{
+                        color: $darkSlateGrey;
+                        font-size: 1.2rem;
+                        font-weight: 700;
+                    }
+                    &-error{
+                        display: none;
+                        color: $tomato;
+                        font-size: 1.2rem;
+                        font-weight: 700;
+                    }
+                }
+                &-email{
+                    margin-top: 1rem;
+                    padding: 1.7rem;
+                    color: $grey;
+                    border-radius: 8px;
+                    border: 1px solid $grey;
+                    &--active{
+                        border: 1px solid $tomato;
+                        background-color: #ffe8e4;
+                        color: $tomato;
+                    }
+                }
+                &-btn{
+                    margin-top: 3rem;
+                    padding: 1.7rem;
+                    background-color: $darkSlateGrey;
+                    border-radius: 8px;
+                    color: $white;
+                    font-weight: 700;
+                    border: none;           
+                    cursor: pointer;
+                    transition: background-image 0.3s;
+                    &:hover{
+                        background-image: linear-gradient(90deg, #f1527d, #ff683d);
+                        box-shadow:  0 5px 10px #ff683d;
+                    }
+                }
+            }
+        }
+    }
+    .popup{
+        display: none;
+        align-items: flex-start;
+        justify-content: space-between;
+        flex-direction: column;
+        position: absolute;
+        padding: 3rem;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100dvh;
+        background-color: $white;
+        z-index: 1;
+        &__text{
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            flex-direction: column;
+            height: 70%;
+            &-heading{
+                padding: 4rem 0;
+                font-size: 3.5rem;
+                line-height: 3.5rem;
+                color: $darkSlateGrey;
+            }
+            &-info{
+                line-height: 2.4rem;
+                span{
+                    color: $darkSlateGrey;
+                    font-weight: 700;
+                }
+            }
+        }
+        &__btn{
+            margin-top: 4rem;
+            padding: 1.7rem;
+            width: 100%;
+            background-color: $darkSlateGrey;
+            border-radius: 8px;
+            color: $white;
+            font-weight: 700;
+            border: none;
+            cursor: pointer;
+            transition: background-image 0.3s;
+            &:hover{
+                background-image: linear-gradient(90deg, #f1527d, #ff683d);
+                box-shadow:  0 5px 10px #ff683d;
+            }
+        }   
+    }
+}
+@media(min-width:1440px){
+    body{
+        min-height: 100dvh;
+    }
+    .main{
+        width: 1000px;
+        .newsletter{
+            justify-content: space-between;
+            flex-direction: row;
+            height: auto;
+            border-radius: 30px;
+            border: 20px solid $white;
+            overflow: hidden;
+            &__img{
+                display: flex;
+                justify-content: center;
+                width: 40%;
+                order: 2;
+                &-img{
+                    display: none;
+                    &-desktop{
+                        display: block;
+                    }
+                }
+            }
+            &__text{
+                padding: 3rem 5rem;
+                margin-right: 30px;
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                width: 60%;
+                order: 1;
+                &-heading{
+                    font-size: 6.5rem;
+                }
+                &-description{
+                    margin: 3rem 0;
+                    font-size: 1.8rem;
+                }
+                &-benefit{
+                    font-size: 1.7rem;
+                }
+            }
+        }
+        .popup{
+            display: none;
+            justify-content: center;
+            align-items: flex-start;
+            flex-direction: column;
+            padding: 0 5rem;
+            top: 50%;
+            left: 50%;
+            width: 500px;
+            height: 500px;
+            border-radius: 30px;
+            transform: translate(-50%, -50%);
+           
+            &__heading{
+                padding: 3rem 0rem;
+                font-size: 6rem;
+                line-height: 6rem;
+              
+            }
+           
+        }
+    }
+}

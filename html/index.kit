@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <title>Newsletter</title>
+    <link rel="stylesheet" href="dist/css/style.min.css">
+</head>
+<body>
+    <main class="main">
+        <section class="newsletter">
+            <div class="newsletter__img">
+                <img class="newsletter__img-img" src="dist/img/illustration-sign-up-mobile.svg" alt="">
+                <img class="newsletter__img-img-desktop" src="dist/img/illustration-sign-up-desktop.svg" alt="">
+            </div>
+            <div class="newsletter__text">
+                <h3 class="newsletter__text-heading">Stay updated!</h3>
+                <p class="newsletter__text-description">Join 60,000+ product menagers receiving monthly updates on:</p>
+                <div class="newsletter__text-benefit">
+                    <div class="newsletter__text-benefit-icon">
+                        <img src="dist/img/icon-list.svg" alt="">
+                    </div>
+                    <p class="newsletter__text-benefit-info">Product discovery and building what matters</p>
+                </div>
+                <div class="newsletter__text-benefit">
+                    <div class="newsletter__text-benefit-icon">
+                        <img src="dist/img/icon-list.svg" alt="">
+                    </div>
+                    <p class="newsletter__text-benefit-info">Measuring to ensure updates are a success</p>
+                </div>
+                <div class="newsletter__text-benefit">
+                    <div class="newsletter__text-benefit-icon">
+                        <img src="dist/img/icon-list.svg" alt="">
+                    </div>
+                    <p class="newsletter__text-benefit-info">And much more!</p>
+                </div>
+                <form class="newsletter__text-form">
+                    <div class="newsletter__text-form-box">
+                        <label for="email">Email address</label>
+                        <p class="newsletter__text-form-box-error">Valid email required</p>
+                    </div>
+                    <input class="newsletter__text-form-email" type="email" placeholder="email@company.com">
+                    <input class="newsletter__text-form-btn" type="button" value="Subscribe to monthly newsletter">
+                </form>
+            </div>
+        </section>
+        <div class="popup">
+            <div class="popup__text">
+                <img src="dist/img/icon-success.svg" alt="">
+                <h3 class="popup__text-heading">Thanks for subscribing!</h3>
+                <p class="popup__text-info">A confirmation email has been sent to <span></span>. Please open it and click the button inside to confirm your subscription</p>
+            </div>
+            <button class="popup__btn">Dismiss message</button>
+        </div>
+    </main>
+    <script src="dist/js/script.min.js"></script>
+</body>
+</html>
